@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mata zumbis</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/style.css" />
+
+		<script>
+			function iniciarJogo() {
+				var nivel = document.getElementById('nivel').value
+
+				if(nivel === '') {
+					alert('Selecione um nível para iniciar o jogo')
+					return false
+				}
+
+				window.location.href = "app.html?" + nivel
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 mt-4">
+					<div class="d-flex justify-content-center">
+						<img id="mata_zumbi" src="assets/images/mata_zumbi.png" />
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="d-flex justify-content-center">
+						<div class="mb-2">
+							<select class="form-control" id="nivel">
+								<option value="">-- Selecione o nível --</option>
+								<option value="facil">Fácil</option>
+								<option value="intermediario">Intermediário</option>
+								<option value="dificil">Díficil</option>
+								<option value="hard">Extremo</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="d-flex justify-content-center">
+						<button type="button" class="btn btn-danger btn-lg" onclick="iniciarJogo()" >Iniciar Jogo</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
